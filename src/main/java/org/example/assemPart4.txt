@@ -1,0 +1,29 @@
+.data
+var int a
+var int b
+var int c
+
+.code
+prints "-----Part4------"
+loadintliteral ri1, 10
+loadintliteral ri2, 20
+
+storeintvar ri1, a
+storeintvar ri2, b
+
+printi a
+printi b
+printi c
+
+prints "multiply the values"
+loadintvar ri4, a
+loadintvar ri5, b
+
+mult ri4, ri5, ri6
+
+storeintvar ri6, c
+
+printi a
+printi b
+printi c
+

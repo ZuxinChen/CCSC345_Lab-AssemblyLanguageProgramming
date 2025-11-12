@@ -1,0 +1,10 @@
+.data
+.code
+prints "-----Part6------"
+loadintliteral ri1, 0
+loadintliteral ri2, 10
+
+:loop
+inc ri1
+printi ri1
+bne ri1,ri2, loop

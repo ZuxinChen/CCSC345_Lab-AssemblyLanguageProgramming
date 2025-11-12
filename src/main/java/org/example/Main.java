@@ -2,23 +2,23 @@ package org.example;
 
 import program.PseudoAssemblyWithStringProgram;
 
+import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Main {
-    public static void main(String[] args) {
-        String code = "";
-        code += ".data\n";
-        code += "var int x\n";
-        code += ".code\n";
-        code += "loadintliteral ri1, 88\n";
-        code += "storeintvar ri1, x\n";
-        code += "printi x\n";
-        code += "printi ri1\n";
+    public static void main(String[] args) throws IOException {
+
+
+        String code = Files.readString(Paths.get("src/main/java/org/example/assemPart7.txt"));
+
         int numVirtualRegistersInt = 32;
         int numVirtualRegistersString = 32;
         String outputClassName = "MyLabProgram";
         String outputPackageNameDot = "mypackage";
         String classRootDir = System.getProperty("user.dir") + "/" + "target/classes";
+
         PseudoAssemblyWithStringProgram pseudoAssemblyWithStringProgram = new
                 PseudoAssemblyWithStringProgram(
                 code,
@@ -37,5 +37,5 @@ public class Main {
             PrintStream outstream = new PrintStream(System.out);
             pseudoAssemblyWithStringProgram.run(outstream);
         }
-    }
-}
+    } // end main method
+}//end class Main

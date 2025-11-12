@@ -1,0 +1,15 @@
+.data
+.code
+prints "-----Part5------"
+loadintliteral ri1, 20
+loadintliteral ri2, 20
+
+be ri1, ri2 ,equal
+prints "Values are not equal"
+branch endif
+
+:equal
+prints "Values are equal"
+
+:endif
+prints "Program done"

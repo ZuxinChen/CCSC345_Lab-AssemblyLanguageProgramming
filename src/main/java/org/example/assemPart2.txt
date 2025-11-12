@@ -1,0 +1,9 @@
+.data
+.code
+prints "-----Part2------"
+loadintliteral ri1, 88
+printi ri1
+
+
+
+
